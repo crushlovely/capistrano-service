@@ -37,10 +37,12 @@ cap service:nginx:restart          # Restart service: nginx
 cap service:nginx:start            # Start service: nginx
 cap service:nginx:status           # Status for service: nginx
 cap service:nginx:stop             # Stop service: nginx
+cap service:nginx:reload           # Reload service: nginx
 cap service:unicorn:restart        # Restart service: unicorn
 cap service:unicorn:start          # Start service: unicorn
 cap service:unicorn:status         # Status for service: unicorn
 cap service:unicorn:stop           # Stop service: unicorn
+cap service:unicorn:reload         # Reload service: unicorn
 ```
 
 ### Service Roles

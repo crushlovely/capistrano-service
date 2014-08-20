@@ -28,6 +28,13 @@ Capistrano::Configuration.env.fetch(:services, []).each do |service|
           info capture("sudo service #{service} status")
         end
       end
+      
+      desc "Reload service: #{service}"
+      Rake::Task.define_task(:reload) do |t|
+        on roles fetch(:"#{service}_roles", :all) do
+          info capture("sudo service #{service} reload")
+        end
+      end
     end
   end
 end
